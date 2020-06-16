@@ -35,7 +35,7 @@
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin.spark</groupId>
-            <artifactId>core</artifactId>
+            <artifactId>core-spark3</artifactId>
             <version>${parent.version}</version>
         </dependency>
         <dependency>

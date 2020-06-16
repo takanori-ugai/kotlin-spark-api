@@ -11,7 +11,8 @@
     <modules>
         <module>kotlin-spark-api</module>
         <module>examples</module>
-        <module>core</module>
+        <module>core-spark2</module>
+        <module>core-spark3</module>
     </modules>
     <build>
         <pluginManagement>

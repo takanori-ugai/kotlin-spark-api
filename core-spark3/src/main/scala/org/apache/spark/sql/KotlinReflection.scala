@@ -399,6 +399,7 @@ object KotlinReflection extends KotlinReflection {
                   returnNullable = false)
               case ArrayType(elementType, containsNull) =>
                 val dataTypeWithClass = elementType.asInstanceOf[DataTypeWithClass]
+
                 val mapFunction: Expression => Expression = element => {
                   // upcast the array element to the data type the encoder expected.
                   val et = getType(dataTypeWithClass.cls)
