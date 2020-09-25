@@ -1,4 +1,5 @@
-# Kotlin for Apache® Spark™
+# Kotlin for Apache® Spark™ [![Maven Central](https://img.shields.io/maven-central/v/org.jetbrains.kotlinx.spark/kotlin-spark-api-parent.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:org.jetbrains.kotlinx.spark%20AND%20v:1.0.0-preview1)
+
 
 Your next API to work with  [Apache Spark](https://spark.apache.org/). 
 
@@ -9,7 +10,7 @@ We have opened a Spark Project Improvement Proposal: [Kotlin support for Apache 
 
 ## Table of Contents
 
-- [Supported versions of Apache Spark](#supported-apache-spark)
+- [Supported versions of Apache Spark](#supported-versions-of-apache-spark)
 - [Releases](#releases)
 - [How to configure Kotlin for Apache Spark in your project](#how-to-configure-kotlin-for-apache-spark-in-your-project)
 - [Kotlin for Apache Spark features](#kotlin-for-apache-spark-features)
@@ -26,27 +27,17 @@ We have opened a Spark Project Improvement Proposal: [Kotlin support for Apache 
 
 ## Supported versions of Apache Spark
 
-<table>
-    <thead>
-        <tr>
-            <th>Apache Spark</th>
-            <th>Kotlin for Apache Spark</th>
-        </tr>
-    </thead>
-    <tbody align="center">
-        <tr>
-            <td>3.0.0</td>
-            <td>0.3 +</td>
-        </tr>
-    </tbody>
-</table>
+| Apache Spark | Scala |  Kotlin for Apache Spark |
+|:------------:|:-----------:|:------------:|
+| 3.0.0        | 2.12 | kotlin-spark-api-3.0.0_2.12:1.0.0-preview1    |
 
 ## Releases
 
-The list of Kotlin for Apache Spark releases is available [here](https://github.com/JetBrains/kotlin-spark-api/releases/). 
-The `kotlin-spark-api` artifact can be obtained from [JitPack](https://jitpack.io/#JetBrains/kotlin-spark-api).
+The list of Kotlin for Apache Spark releases is available [here](https://github.com/JetBrains/kotlin-spark-api/releases/).
+The Kotlin for Spark artifacts adhere to the following convention:
+`[Apache Spark version]_[Scala core version]:[Kotlin for Apache Spark API version]` 
 
-[![](https://jitpack.io/v/JetBrains/kotlin-spark-api.svg)](https://jitpack.io/#JetBrains/kotlin-spark-api)
+[![Maven Central](https://img.shields.io/maven-central/v/org.jetbrains.kotlinx.spark/kotlin-spark-api-parent.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.jetbrains.kotlinx.spark%22%20AND%20a:%22kotlin-spark-api-3.0.0_2.12%22)
 
 ## How to configure Kotlin for Apache Spark in your project
 
@@ -55,15 +46,9 @@ You can add Kotlin for Apache Spark as a dependency to your project: `Maven`, `G
 Here's an example `pom.xml`:
 
 ```xml
-<repositories>
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-</repositories>
 <dependency>
     <groupId>com.github.JetBrains.kotlin-spark-api</groupId>
-    <artifactId>kotlin-spark-api</artifactId>
+    <artifactId>kotlin-spark-api-3.0.0_2.12</artifactId>
     <version>${kotlin-spark-api.version}</version>
 </dependency>
 <dependency>
@@ -74,11 +59,11 @@ Here's an example `pom.xml`:
 ```
 
 Note that `core` is being compiled against Scala version `2.12`.  
-You can find a complete example with `pom.xml` and `build.gradle` in the [Quick Start Guide](docs/quick-start-guide.md).
+You can find a complete example with `pom.xml` and `build.gradle` in the [Quick Start Guide](https://github.com/JetBrains/kotlin-spark-api/wiki/Quick-Start-Guide).
 
 Once you have configured the dependency, you only need to add the following import to your Kotlin file: 
 ```kotlin
-import org.jetbrains.spark.api.*
+import org.jetbrains.kotlinx.spark.api.*
 ```   
 
 ## Kotlin for Apache Spark features
@@ -153,8 +138,8 @@ For more idiomatic Kotlin code we've added `toList` and `toArray` methods in thi
 
 ## Examples
 
-For more, check out [examples](https://github.com/JetBrains/kotlin-spark-api/tree/master/examples/src/main/kotlin/org/jetbrains/spark/api/examples) module.
-To get up and running quickly, check out this [tutorial](docs/quick-start-guide.md). 
+For more, check out [examples](https://github.com/JetBrains/kotlin-spark-api/tree/master/examples/src/main/kotlin/org/jetbrains/kotlinx/spark/examples) module.
+To get up and running quickly, check out this [tutorial](https://github.com/JetBrains/kotlin-spark-api/wiki/Quick-Start-Guide). 
 
 ## Reporting issues/Support
 Please use [GitHub issues](https://github.com/JetBrains/kotlin-spark-api/issues) for filing feature requests and bug reports.
